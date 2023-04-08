@@ -14,7 +14,7 @@ import {
 
 function Footer() {
   return (
-    <div className="px-52 py-10">
+    <div className="px-52 py-10 bg-secondary">
       <Image src={logo} alt="Logo Oracle" />
 
       <div className="grid grid-cols-3 grid-flow-row justify-center py-10">

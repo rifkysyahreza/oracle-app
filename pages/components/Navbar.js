@@ -12,6 +12,7 @@ import {
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import Link from "next/link";
 
 function Navbar() {
   let [isOpen, setIsOpen] = useState(false);
@@ -25,13 +26,13 @@ function Navbar() {
   };
 
   return (
-    <>
+    <div className="absolute w-full">
       <div className="flex flex-row justify-between items-center bg-secondary px-52 py-5">
-        <div className="flex flex-row gap-5 items-center text-white">
+        <div className="flex flex-row gap-5 items-center text-white font-semibold">
           <Image src={logo} alt="Logo Oracle" />
-          <h1>Home</h1>
-          <h1>Premium</h1>
-          <h1>Download</h1>
+          <Link href="/">Home</Link>
+          <Link href="/premium">Premium</Link>
+          <Link href="/download">Download</Link>
           <div className="bg-white">
             <InputGroup>
               <Input placeholder="Search" colorScheme="green"></Input>
@@ -43,7 +44,7 @@ function Navbar() {
         </div>
 
         <button
-          className="px-6 py-3 bg-gray-300 rounded-full flex flex-row items-center gap-1"
+          className="px-6 py-3 bg-gray-500 rounded-full flex flex-row items-center gap-1 text-white font-semibold"
           onClick={openModal}
         >
           LOGIN
@@ -76,7 +77,13 @@ function Navbar() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-black p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-black pb-6 px-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    className="text-white flex justify-end pt-3 hover:cursor-pointer"
+                    onClick={closeModal}
+                  >
+                    X
+                  </Dialog.Title>
                   <div className="text-white text-center">
                     <Dialog.Title
                       as="h3"
@@ -108,7 +115,7 @@ function Navbar() {
                   <div className="mt-4 flex flex-row justify-center w-full">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="w-full inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
                       Kirim
@@ -120,7 +127,7 @@ function Navbar() {
           </div>
         </Dialog>
       </Transition>
-    </>
+    </div>
   );
 }
 

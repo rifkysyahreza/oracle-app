@@ -13,6 +13,8 @@ export default function App({ Component, pageProps }) {
       break;
     case "/download":
       break;
+    case "/premium":
+      break;
 
     default:
       break;

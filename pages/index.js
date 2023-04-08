@@ -25,10 +25,10 @@ export default function Home() {
           <Navbar></Navbar>
         </header>
 
-        <main className="px-52 ">
+        <main className="px-52 pt-32">
           {/* Carousel */}
           <div className="max-w-full container py-10 ">
-            <Carousel>
+            <Carousel infiniteLoop={true} autoPlay={true}>
               <div>
                 <Image src={Konten1} alt="Carousel 1"></Image>
               </div>
