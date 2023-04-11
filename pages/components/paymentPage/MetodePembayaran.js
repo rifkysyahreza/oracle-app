@@ -9,8 +9,8 @@ import { Box, Input, InputGroup } from "@chakra-ui/react";
 
 function MetodePembayaran() {
   return (
-    <div className="text-white">
-      <Box p="6" maxW="lg" className="bg-secondary flex flex-col gap-5">
+    <div className="text-white w-full">
+      <Box p="6" className="bg-secondary flex flex-col gap-5">
         <h1 className="font-bold text-xl">Pilih Metode Pembayaran</h1>
         <Box
           as="button"

@@ -17,13 +17,18 @@ function payment() {
       </div>
       <div className="relative">
         <Image src={BannerPayment} className="w-full" alt="banner"></Image>
+        <div className="absolute top-32 px-52 flex justify-end w-full">
+          <div className="w-1/2">
+            <InputGameId></InputGameId>
+          </div>
+        </div>
       </div>
 
       <div className="">
         <div className="px-52">
-          <div className="relative bottom-52 flex flex-row justify-between border-2 border-red-300">
-            <div className="flex flex-col gap-10 justify-center basis-1/2 border-2 border-blue-300">
-              <div className="bg-white max-w-fit px-2 py-10 rounded-full border-2 border-black">
+          <div className="relative flex flex-row justify-between">
+            <div className="flex flex-col gap-10 justify-start basis-1/2">
+              <div className="bg-white -mt-12 max-w-fit px-2 py-10 rounded-full border-2 border-black">
                 <Image src={Freefayer} alt="freefayer"></Image>
               </div>
 
@@ -55,10 +60,7 @@ function payment() {
               </div>
             </div>
 
-            <div className=" border-2 border-green-300 flex flex-col items-center gap-5">
-              <div className="w-full">
-                <InputGameId></InputGameId>
-              </div>
+            <div className="basis-1/2 flex flex-col items-center gap-5">
               <div className="w-full">
                 <NominalTopUp></NominalTopUp>
               </div>

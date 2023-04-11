@@ -3,8 +3,8 @@ import { Box, Input, InputGroup } from "@chakra-ui/react";
 
 function NominalTopUp() {
   return (
-    <div className="text-white">
-      <Box p="6" maxW="lg" className="bg-secondary flex flex-col gap-5">
+    <div className="text-white w-full">
+      <Box p="6" className="bg-secondary flex flex-col gap-5">
         <h1 className="font-bold text-xl">Pilih Nominal Top Up</h1>
         <div className="grid grid-cols-3 grid-flow-row gap-3 place-items-center text-black">
           <button className="bg-white px-3 py-2 w-full rounded-lg">
