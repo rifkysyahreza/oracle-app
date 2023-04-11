@@ -28,7 +28,7 @@ export default function Home() {
         <main className="px-52 pt-32">
           {/* Carousel */}
           <div className="max-w-full container py-10 ">
-            <Carousel infiniteLoop={true} autoPlay={true}>
+            <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true}>
               <div>
                 <Image src={Konten1} alt="Carousel 1"></Image>
               </div>
