@@ -9,6 +9,14 @@ import {
   InputRightElement,
   InputLeftAddon,
 } from "@chakra-ui/react";
+import {
+  FaTwitter,
+  FaFacebook,
+  FaInstagram,
+  FaTelegramPlane,
+  FaYoutube,
+  FaSearch,
+} from "react-icons/fa";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
@@ -35,10 +43,16 @@ function Navbar() {
           <Link href="/download">Download</Link>
           <div className="bg-white">
             <InputGroup>
-              <Input placeholder="Search" colorScheme="green"></Input>
-              <InputRightElement
-                children={<Image src={search_vector} alt="Search Logo" />}
-              />
+              <Input
+                placeholder="Search"
+                className="text-black"
+                colorScheme="green"
+              ></Input>
+              <InputRightElement>
+                <span className="text-gray-300">
+                  <FaSearch></FaSearch>
+                </span>
+              </InputRightElement>
             </InputGroup>
           </div>
         </div>
@@ -105,7 +119,7 @@ function Navbar() {
                   </div>
 
                   <InputGroup className="mt-4">
-                    <InputLeftAddon children="+62" />
+                    <InputLeftAddon>+62</InputLeftAddon>
                     <Input
                       placeholder="Nomor telepon"
                       className="text-white"

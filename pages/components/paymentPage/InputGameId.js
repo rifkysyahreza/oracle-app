@@ -16,7 +16,7 @@ function InputGameId() {
         </div>
         <h1>
           Untuk menemukan ID Anda, klik pada ikon karakter. User ID tercantum di
-          bawah nama karakter Anda. Contoh: '1234567890'.
+          bawah nama karakter Anda. Contoh: 1234567890.
         </h1>
       </Box>
     </div>
