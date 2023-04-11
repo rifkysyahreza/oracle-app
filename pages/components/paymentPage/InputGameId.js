@@ -6,7 +6,7 @@ function InputGameId() {
     <div className="text-white">
       <Box p="6" maxW="lg" className="bg-secondary flex flex-col gap-5">
         <h1 className="font-bold text-xl">Masukkan Game ID</h1>
-        <div className="bg-white rounded-lg">
+        <div className="bg-white text-black rounded-lg">
           <InputGroup>
             <Input
               placeholder="Silahkan masukkanID anda"
